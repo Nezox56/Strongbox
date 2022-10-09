@@ -11,7 +11,7 @@ namespace Strongbox
         {
             InitializeComponent();
         }
-
+        
         int n;
 
         private PictureBox[,] pb = null;
@@ -35,7 +35,7 @@ namespace Strongbox
                 {
                     pb[i, j] = new PictureBox
                     {
-                        Location = new Point(10 + i * 100, 10 + j * 100),
+                        Location = new Point(10 + i * 100, 20 + j * 100),
                         Size = new System.Drawing.Size(80, 80),
                         TabIndex = i,
                         BackColor = Color.Black,
@@ -45,18 +45,18 @@ namespace Strongbox
                     Controls.Add(pb[i, j]);
                     int row = i;
                     int column = j;
-                    pb[i, j].Click += (x, y) => { pbClick(row, column); };
+                    pb[i, j].Click += (x, y) => { PbClick(row, column); };
                 }
             }
 
             var rnd = new Random();
             for (int i = 0; i < 40; i++)
             {
-                pbClick(rnd.Next(n), rnd.Next(n), true);
+                PbClick(rnd.Next(n), rnd.Next(n), true);
             }
         }
 
-        void pbClick(int row, int column, bool init = false)
+        void PbClick(int row, int column, bool init = false)
         {
             bool win = !init;
             for (int i = 0; i < n; i++)
@@ -77,7 +77,11 @@ namespace Strongbox
 
             }
 
-            if (win) MessageBox.Show("win");
+            if (win)
+            {
+                
+                MessageBox.Show("Сейф открыт!", "Победа!");
+            }
         }
     }
 }
