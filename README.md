@@ -10,7 +10,7 @@
  
 Число N настраивается в этом поле:
 
-![image](https://user-images.githubusercontent.com/36198892/194755187-94595dd8-cf70-4d4c-912c-1b49fbc5da3d.png)
+![image](https://user-images.githubusercontent.com/36198892/194759071-b5f7a1e3-dbf9-4dd3-ac85-e860f60c8d0f.png)
 
 
 Для того чтобы начать новую игру (после того как выбрано N), необходимо нажать на кнопку "Новая игра".
